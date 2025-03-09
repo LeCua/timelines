@@ -76,8 +76,10 @@ class IndicatorThemeData with Diagnosticable {
     );
   }
 
+  // @override
+  // int get hashCode => hashValues(color, size, position);
   @override
-  int get hashCode => hashValues(color, size, position);
+  int get hashCode => Object.hashAll([color, size, position]);
 
   @override
   bool operator ==(Object other) {

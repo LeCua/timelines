@@ -81,14 +81,18 @@ class ConnectorThemeData with Diagnosticable {
     );
   }
 
+  // @override
+  // int get hashCode {
+  //   return hashValues(
+  //     color,
+  //     space,
+  //     thickness,
+  //     indent,
+  //   );
+  // }
   @override
   int get hashCode {
-    return hashValues(
-      color,
-      space,
-      thickness,
-      indent,
-    );
+    return Object.hashAll([color, space, thickness, indent]);
   }
 
   @override

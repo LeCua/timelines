@@ -343,7 +343,8 @@ class TimelineThemeData with Diagnosticable {
       indicatorTheme,
       connectorTheme,
     ];
-    return hashList(values);
+    // return hashList(values);
+    return Object.hashAll(values);
   }
 
   @override
